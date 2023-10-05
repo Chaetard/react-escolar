@@ -1,0 +1,49 @@
+.cardText {
+  width: 23vw;
+  height: 60vh;
+  margin: 10px;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.cardText:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.2s;
+}
+.tituloCard {
+  font-size: 25px;
+  font-family: "Quicksand", sans-serif;
+}
+.imgCard {
+  height: 50%;
+  transition: 0.2s;
+}
+.imgCard:hover {
+  transform: scale(1.1) rotate(1deg);
+  transition: 0.2s;
+}
+.btnlog {
+  width: 40%;
+}
+.btncont {
+  flex: auto;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* texto resumen forma parte del modulo App.js */
+.textoResumen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.textoResumen > div > h1{
+    font-size: 60px;
+
+}
+.textoResumen > div > p{
+    font-size: 22px;
+    text-align: justify;
+}
