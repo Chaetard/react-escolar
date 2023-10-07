@@ -1,5 +1,61 @@
-nav{
-    border-radius: 0 0 20px 20px ;
-    height: 70px;
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&family=Rubik:ital,wght@1,300&display=swap");
+
+nav {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 5px;
+  border-radius: 20px 20px 20px 20px;
+  height: 70px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  
 }
 
+.navbar a {
+  color: white !important;
+}
+.btnnavtog {
+  color: transparent;
+  background-color: rgb(39, 46, 53);
+}
+@media screen and (max-width: 1280px) {
+  nav {
+    margin: 5px 10px 0px 10px;
+    border-radius: 10px;
+    z-index: 2;
+    position: fixed !important;
+    width: 95vw;
+  }
+  #titleEscolar {
+    font-size: 20px !important;
+  }.contenedor{
+    margin-top: 80px;
+    
+  }
+}
+#titleEscolar {
+  font-family: "Quicksand", sans-serif;
+  font-family: "Rubik", sans-serif;
+  font-size: 30px;
+}
+#gradu {
+  height: 50px;
+  padding-left: 5px;
+  padding-right: 10px;
+  transition: 0.2s;
+}
+#gradu:hover {
+  transform: scale(1.05) ;
+  transition: 0.2s;
+}
+
+
+
+.anavI {
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menucolap {
+  padding: 10px;
+  border-radius: 0 0 10px 10px;
+}

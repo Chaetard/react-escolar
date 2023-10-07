@@ -1,1 +1,8 @@
-.contenedor{}
+.contenedor{
+  margin-top: 12px;
+  
+}
+.conta{
+  display: flex;
+  justify-content: center;
+}

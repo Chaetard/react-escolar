@@ -1,6 +1,6 @@
 .cardText {
-  width: 23vw;
-  height: 60vh;
+  width: 40vw;
+  height: 70vh;
   margin: 10px;
   border-radius: 10px;
   transition: 0.2s;
@@ -15,7 +15,8 @@
   font-family: "Quicksand", sans-serif;
 }
 .imgCard {
-  height: 50%;
+  margin-top: 10px;
+  height: 70%;
   transition: 0.2s;
 }
 .imgCard:hover {
@@ -32,6 +33,24 @@
   justify-content: center;
 }
 
+@media screen and (max-width: 1280px) {
+  .imgCard{
+    height: 62%;
+  }
+  .cardText {
+    width: 80vw;
+    height: 38vh;
+    margin: 10px;
+    border-radius: 10px;
+    transition: 0.2s;
+  }
+  .btnlog {
+    width: 80%;
+  }
+  .tituloCard{
+    font-size: 20px;
+  }
+}
 
 /* texto resumen forma parte del modulo App.js */
 .textoResumen{
@@ -44,6 +63,6 @@
 
 }
 .textoResumen > div > p{
-    font-size: 22px;
+    font-size: 18px;
     text-align: justify;
 }

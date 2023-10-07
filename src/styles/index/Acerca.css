@@ -1,0 +1,36 @@
+.imgAcerca{
+    height: 400px;
+}
+@media screen and (max-width: 1280px) {
+    .imgAcerca{
+        width: 70vw;
+        height: 70vw;
+    }
+    .acercaMiescolar{
+        margin-top: 20px;
+    }
+}
+.carouselAcerca{
+    width: 70vw;
+}
+.caroCont{
+    
+    align-items: center;
+    justify-content: center;
+}
+#tituloAcerca{
+    width: 100%;
+    font-size: 40px;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Rubik', sans-serif;
+}#textoAcerca{
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-family: 'Rubik', sans-serif;
+}
+.contenedorTAc{
+    align-items: center;
+    justify-content: center;
+}
+
