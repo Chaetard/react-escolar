@@ -12,13 +12,10 @@ function App() {
           <div className="col-md-12">
             <ContenedorLogins />
           </div>
-         
         </div>
       </div>
-        
+
       <Acerca />
-
-
     </div>
   );
 }

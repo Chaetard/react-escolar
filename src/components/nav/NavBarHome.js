@@ -32,12 +32,12 @@ function NavBarHome() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="#acercaDe">
                   Acerca de
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <a className="nav-link" href="#contactoRef">
                   Contacto
                 </a>
               </li>
