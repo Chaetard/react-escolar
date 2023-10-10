@@ -1,13 +1,13 @@
 import React from "react";
-import certificate from "../../img/certificate.png";
+// import certificate from "../../img/certificate.png";
 import education from "../../img/education.png";
-import graduate from "../../img/graduate.png";
+// import graduate from "../../img/graduate.png";
 import "../../styles/index/Acerca.css";
 
 function Acerca() {
   return (
     <div>
-      <div className="container-fluid acercaMiescolar" id="acercaDe">
+      <div className="container acercaMiescolar" id="acercaDe">
         <div className="row">
           <div className="col-md-8 d-flex contenedorTAc">
             <div>
@@ -31,7 +31,7 @@ function Acerca() {
         </div>
       </div>
 
-      <section className="container-fluid" id="preguntas">
+      <section className="container" id="preguntas">
         <div className="preguntas">
           <div className="row">
             <h2 className="col preguTi">Preguntas Frecuentes</h2>
@@ -68,34 +68,7 @@ function Acerca() {
                     </div>
                   </div>
                 </div>
-                <div className="accordion-item">
-                  <h2 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseTwo"
-                      aria-expanded="false"
-                      aria-controls="flush-collapseTwo"
-                    >
-                      ¿Qué funciones ofrece Mi Escolar?
-                    </button>
-                  </h2>
-                  <div
-                    id="flush-collapseTwo"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#accordionFlushExample"
-                  >
-                    <div className="accordion-body">
-                      Mi Escolar permite a los profesores y administradores
-                      registrar y hacer un seguimiento de las actividades de los
-                      alumnos, como tareas, exámenes y proyectos. También brinda
-                      la posibilidad de asignar calificaciones y comentarios a
-                      cada actividad. Además, ofrece una herramienta para llevar
-                      un registro detallado de las asistencias de los alumnos.
-                    </div>
-                  </div>
-                </div>
+
                 <div className="accordion-item">
                   <h2 className="accordion-header">
                     <button
@@ -303,6 +276,9 @@ function Acerca() {
               rows="3"
             ></textarea>
           </div>
+          <button type="button" class="btn btn-success">
+            Enviar
+          </button>
         </div>
       </div>
     </div>

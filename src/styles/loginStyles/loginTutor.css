@@ -20,7 +20,7 @@
   transition: 0.2s;
 }
 .imgCard:hover {
-  transform: scale(1.1) rotate(1deg);
+  transform: scale(1.1);
   transition: 0.2s;
 }
 .btnlog {

@@ -10,15 +10,17 @@
     height: 0;
     width: 0;
   }
-  .acercaMiescolar {
-    padding-top: 80px;
-  }
+ 
   #preguntas {
     padding-top: 80px;
   }
   .contacto {
     width: 90vw !important;
   }
+  textarea{
+    height: 150px !important;
+  }
+
 }
 #tituloAcerca,
 .preguTi {
@@ -46,8 +48,18 @@ height: 100vh;
   justify-content: center;  
 }
 .contCon{
-  background-color: rgba(110, 111, 32.5, 0.5);
+  background-color: rgba(42, 165, 25, 0.474);
     border-radius: 20px;
     padding: 10px;
-    border: 2px solid rgba(110, 111, 32.5, 0.5);
+    
+}
+textarea{
+  height: 215px;
+}
+.acercaMiescolar {
+
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
