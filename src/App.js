@@ -1,23 +1,8 @@
-import "./App.css";
-import ContenedorLogins from "./components/login/ContenedorLogins";
-import NavBarHome from "./components/nav/NavBarHome";
-import Acerca from "./components/index/Acerca";
+import React from "react";
+import AppRouter from "./router";
+
 function App() {
-  return (
-    <div className="App">
-      <NavBarHome />
-
-      <div className="container-fluid logs">
-        <div className="row ">
-          <div className="col-md-12">
-            <ContenedorLogins />
-          </div>
-        </div>
-      </div>
-
-      <Acerca />
-    </div>
-  );
+  return <AppRouter />;
 }
 
 export default App;

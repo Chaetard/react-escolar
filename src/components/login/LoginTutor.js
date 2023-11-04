@@ -1,6 +1,19 @@
 import React from "react";
 import "../../styles/loginStyles/loginTutor.css";
 import "animate.css";
+import { Link } from "react-router-dom";
+
+let TAM_WIN = window.innerWidth;
+function handleResize() {
+  TAM_WIN = window.innerWidth;
+
+  console.log(TAM_WIN);
+
+  // Aquí puedes realizar acciones adicionales según la resolución
+}
+
+// Agregar un controlador de eventos para el evento 'resize'
+window.addEventListener("resize", handleResize);
 
 function LoginTutor(props) {
   const estilo = {
@@ -9,56 +22,57 @@ function LoginTutor(props) {
 
   const IMG = document.getElementsByClassName("cardText");
   const IMAGEN = document.getElementsByClassName("imgCard");
-  const TAM_WIN = window.innerWidth;
+
+  console.log(TAM_WIN);
 
   function handleClick() {
-    if (TAM_WIN >= 768) {
-      IMAGEN[0].style.height = "70%";
-      IMAGEN[1].style.height = "70%";
-      if (props.texto === "Tutor") {
-        IMG[0].style.width = "55vw";
-        IMG[1].style.width = "22vw";
+    setTimeout(() => {
+      if (TAM_WIN >= 1000) {
+        IMAGEN[0].style.height = "50vh";
+        IMAGEN[1].style.height = "50vh";
+        if (props.texto === "Tutor") {
+          IMG[0].style.width = "55vw";
+          IMG[1].style.width = "22vw";
 
-        IMAGEN[1].style.height = "18vw";
-      } else {
-        IMG[1].style.width = "55vw";
-        IMG[0].style.width = "22vw";
+          IMAGEN[1].style.height = "22vw";
+        } else {
+          IMG[1].style.width = "55vw";
+          IMG[0].style.width = "22vw";
 
-        IMAGEN[0].style.height = "18vw";
+          IMAGEN[0].style.height = "22vw";
+        }
       }
-    } else {
-      IMAGEN[0].style.height = "60%";
-      IMAGEN[1].style.height = "60%";
-
-      IMG[0].style.height = "100vw";
-      IMG[1].style.height = "100vw";
-      if (props.texto === "Tutor") {
-        IMG[0].style.height = "60vh";
-        IMG[1].style.height = "80vw";
-        IMAGEN[0].style.height = "60%";
-      } else {
-        IMG[1].style.height = "60vh";
-        IMG[0].style.height = "80vw";
-        IMAGEN[1].style.height = "60%";
-      }
-    }
+    }, 150);
   }
 
+  function leavePointer() {
+    setTimeout(() => {
+      if (TAM_WIN >= 1000) {
+        IMAGEN[0].style.height = "50vh";
+        IMAGEN[1].style.height = "50vh";
+        IMG[0].style.width = "40vw";
+        IMG[1].style.width = "40vw";
+        IMG[0].style.height = "auto";
+        IMG[1].style.height = "auto";
+      }
+    }, 151);
+  }
+
+  const ruta = props.texto;
   return (
-    <div
+    <Link
+      to={{ pathname: ruta }}
       className="cardText container text-center animate__animated animate__fadeInUp"
       style={estilo}
-      onClick={handleClick}
+      onPointerEnter={handleClick}
+      onPointerLeave={leavePointer}
+      
     >
-      <h1 className="tituloCard"> Iniciar Sesión como {props.texto} </h1>
-      <img className="imgCard" src={props.imagen} alt="imagen" />
-
-      <div className="row d-flex btncont">
-        <button type="button" className="btn btn-outline-success btnlog">
-          Inicar Sesion
-        </button>
+      <h1 className="tituloCard">Iniciar Sesión como {props.texto}</h1>
+      <div className="imgJust">
+        <img className="imgCard" src={props.imagen} alt="imagen" />
       </div>
-    </div>
+    </Link>
   );
 }
 

@@ -1,43 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,300&display=swap');
+
+
+
+
 .cardText {
+  display: grid;
+  grid-template-rows: 10vh 60vh;
+  align-items: center;
+  justify-content: center !important;
   width: 40vw;
   height: 70vh;
   margin: 10px;
   border-radius: 10px;
-  transition: 0.2s;
+  transition: 0.5s;
+  text-decoration: none;
+  color: black !important;
 }
 
-.cardText:hover {
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-  transition: 0.2s;
-}
-.tituloCard {
-  font-size: 25px;
-  font-family: "Quicksand", sans-serif;
-}
-.imgCard {
-  margin-top: 10px;
-  height: 70%;
-  transition: 0.2s;
-}
-.imgCard:hover {
-  transform: scale(1.1);
-  transition: 0.2s;
-}
-.btnlog {
-  width: 40%;
-}
-.btncont {
-  flex: auto;
-  margin-top: 20px;
-  align-items: center;
-  justify-content: center;
-}
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1000px) {
   .imgCard{
-    height: 62%;
+    height:23vh !important;
   }
+
+
   .cardText {
+    grid-template-rows: 5vh 23vh 5vh;
+    
     width: 80vw;
     height: 38vh;
     margin: 10px;
@@ -46,11 +35,44 @@
   }
   .btnlog {
     width: 80%;
+    font-size:13px !important;
+    display: block;
   }
   .tituloCard{
     font-size: 20px;
   }
 }
+
+
+.cardText:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.2s;
+}
+.tituloCard {
+  font-size: 20px;
+  font-family: 'Nunito Sans', sans-serif !important;
+}
+.imgCard {
+ 
+  height: 50vh;
+  transition: 0.2s;
+}
+/* .imgCard:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+} */
+.btnlog {
+  width: 40%;
+  font-size: 15px;
+  display: none;
+}
+.btncont {
+  flex: auto;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /* texto resumen forma parte del modulo App.js */
 .textoResumen{
@@ -65,4 +87,21 @@
 .textoResumen > div > p{
     font-size: 18px;
     text-align: justify;
+}
+
+.imgConte{
+  
+  grid-template-columns: 1fr 3fr;
+}
+
+
+
+/* logC */
+
+.logsC{
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  align-items: center;
+  background-color: red;
 }
