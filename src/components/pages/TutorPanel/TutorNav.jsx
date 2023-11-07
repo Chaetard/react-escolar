@@ -1,76 +1,64 @@
+import { Barra, ContainerOption, Option } from "./Barra";
+import gradu from "../../../img/graduation.png";
 import React from "react";
-import { Barra, ContainerOption , Option } from "./Barra";
-// import "./panel-usuarios.module.css"
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import "./estilos-navTutor.css";
+
+const stilosA = {
+  textDecoration: "none",
+  color: "black",
+  fontSize: "1.5rem",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  "&:hover": {
+    cursor: "pointer",
+  },
+};
+
+const estiloActivo = {
+  color: "green",
+  fontWeight: "bold",
+};
 
 function TutorNav() {
   return (
-    <>
-      {/* <Barra>
-        <ContainerOption>
+    <Navbar className="navbarETutor" expand="md">
+      <Navbar.Brand style={stilosA} href="#">
+        <img src={gradu} alt="gradu" id="gradu" />
+        <Option id="titleEscolar"> Mi Escolar </Option>
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto">
+          <Nav.Link href="#" className="itemsNavTutor">
+            <Option>Rocio Isabuela Ibarra Mendoza</Option>
+          </Nav.Link>
+          <Nav.Link href="#" className="itemsNavTutor">
+            <Option>CURP JS81KS0AKD2</Option>
+          </Nav.Link>
+          <Nav.Link href="#" className="itemsNavTutor">
+            <Option style={estiloActivo}>ACTIVO</Option>
+          </Nav.Link>
+          <Nav.Link href="#" className="itemsNavTutor">
+            <Option>2-A</Option>
+          </Nav.Link>
 
-          
-          <Option><h1>Mi Escolar</h1></Option>
-          <Option><p>Nombre de Ejemplo</p></Option>
-          <Option> <p>CURP EJEMPLO324242</p> </Option>
-          <Option> <p>ACTIVO</p> </Option>
-          <Option> <p>2-A</p> </Option>
-          <Option> <p>Materias</p> </Option>
-        </ContainerOption>
-      </Barra> */}
-
-<div className="container-fluid text-center fixed-top" id="navbartop">
-
-        <div className="navbar navbar-expand-sm navbar-light bg-light">
-            <div className="container-fluid">
-
-
-                <button id="miescolar" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Mi
-                    Escolar</button>
-
-
-                <button className="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="collapsibleNavId">
-                    <ul className="navbar-nav me-auto mt-2 mt-lg-0">
-                        <li className="nav-item">
-                            <a className="nav-link active" href="#" aria-current="page">DAVID ALEJANDRO FONSECA HERNANDEZ
-                                <span className="visually-hidden">(current)</span></a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#" id="curptop">CURP NJFS78DSD8F283</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#" id="activo">ACTIVO</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="#">2-A</a>
-                        </li>
-                        <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">Materias</a>
-                            <div className="dropdown-menu" aria-labelledby="dropdownId">
-                                <a className="dropdown-item" href="#espanol">Español </a>
-                                <a className="dropdown-item" href="#matematicas">Matematicas </a>
-                                <a className="dropdown-item" href="#force">Formacion Civica y Etica</a>
-                                <a className="dropdown-item" href="#ciencias">Ciencias</a>
-                                <a className="dropdown-item" href="#geografia">Geografia</a>
-                                <a className="dropdown-item" href="#historia">Historia</a>
-
-                            </div>
-                        </li>
-                    </ul>
-
-                    <a href="../index.html" className="btn btn-danger"> Salir</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    </>
+          <NavDropdown className="itemsNavTutor" title="Materias" id="basic-nav-dropdown">
+            <NavDropdown.Item href="#action/1"> 
+              <Option>Materias</Option>
+            </NavDropdown.Item>
+            <NavDropdown.Item href="#action/2">
+              <Option>Materias</Option>
+            </NavDropdown.Item>
+            {/* <NavDropdown.Divider /> */}
+            <NavDropdown.Item href="#action/3">
+              <Option>Materias</Option>
+            </NavDropdown.Item>
+          </NavDropdown>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 }
 

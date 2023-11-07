@@ -1,0 +1,18 @@
+.navbarETutor {
+  position: static !important;
+  margin: 0;
+  width: 100vw;
+  border-radius: 0;
+  background-color: rgba(4, 217, 61, 0.2);
+  box-shadow: none;
+}
+
+.itemsNavTutor{
+    color: black !important;
+    font-size: 1.2rem;
+}
+
+#basic-nav-dropdown{
+  color: black !important;
+  font-size: 1.5rem;
+}
