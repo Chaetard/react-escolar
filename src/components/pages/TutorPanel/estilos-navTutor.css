@@ -1,18 +1,23 @@
 .navbarETutor {
   position: static !important;
-  margin: 0;
-  width: 100vw;
-  border-radius: 0;
-  background-color: rgba(4, 217, 61, 0.2);
+  margin: 5px 5vw 0 5vw !important;
+  width: 90vw;
+  border-radius: 10px 10px 10px 10px;
   box-shadow: none;
 }
 
-.itemsNavTutor{
-    color: black !important;
-    font-size: 1.2rem;
+.itemsNavTutor {
+     color: white !important; 
+    
 }
 
 #basic-nav-dropdown{
-  color: black !important;
+   color: white !important; 
   font-size: 1.5rem;
+  
+}
+
+#btnSalirLog{
+  margin-right: 10px;
+  width: 100px;
 }

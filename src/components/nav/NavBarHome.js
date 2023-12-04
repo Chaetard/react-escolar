@@ -10,7 +10,7 @@ function NavBarHome() {
         <div className="container-fluid">
           <a className="navbar-brand d-flex anavI" href="#" >
           <img src={gradu} alt="gradu" id="gradu" />
-            <span id="titleEscolar"> Mi Escolar </span>
+            <span id="titleEscolar"> Mi Escolar</span>
             
           </a>
           <button

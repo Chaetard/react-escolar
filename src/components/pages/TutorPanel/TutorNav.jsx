@@ -1,4 +1,4 @@
-import { Barra, ContainerOption, Option } from "./Barra";
+import { Option } from "./Barra";
 import gradu from "../../../img/graduation.png";
 import React from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
@@ -6,8 +6,6 @@ import "./estilos-navTutor.css";
 
 const stilosA = {
   textDecoration: "none",
-  color: "black",
-  fontSize: "1.5rem",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -23,39 +21,42 @@ const estiloActivo = {
 
 function TutorNav() {
   return (
-    <Navbar className="navbarETutor" expand="md">
+    <Navbar className="navbarETutor " bg="dark" expand="md">
       <Navbar.Brand style={stilosA} href="#">
         <img src={gradu} alt="gradu" id="gradu" />
-        <Option id="titleEscolar"> Mi Escolar </Option>
+        <Option id="titleEscolar" className="itemsNavTutor">
+          {" "}
+          Mi Escolar{" "}
+        </Option>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="#" className="itemsNavTutor">
-            <Option>Rocio Isabuela Ibarra Mendoza</Option>
-          </Nav.Link>
-          <Nav.Link href="#" className="itemsNavTutor">
-            <Option>CURP JS81KS0AKD2</Option>
-          </Nav.Link>
-          <Nav.Link href="#" className="itemsNavTutor">
-            <Option style={estiloActivo}>ACTIVO</Option>
-          </Nav.Link>
-          <Nav.Link href="#" className="itemsNavTutor">
-            <Option>2-A</Option>
+          <Nav.Link href="#">
+            <Option className="itemsNavTutor">
+              Rocio Isabuela Ibarra Mendoza
+            </Option>
           </Nav.Link>
 
-          <NavDropdown className="itemsNavTutor" title="Materias" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/1"> 
-              <Option>Materias</Option>
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#action/2">
-              <Option>Materias</Option>
-            </NavDropdown.Item>
-            {/* <NavDropdown.Divider /> */}
-            <NavDropdown.Item href="#action/3">
-              <Option>Materias</Option>
-            </NavDropdown.Item>
-          </NavDropdown>
+          {/* <Nav.Link href="#" >
+            <Option className="itemsNavTutor">CURP JS81KS0AKD2</Option>
+          </Nav.Link> */}
+          <Nav.Link href="#">
+            <Option style={estiloActivo}>ACTIVO</Option>
+          </Nav.Link>
+          {/* <Nav.Link href="#">
+            <Option className="itemsNavTutor">2-A</Option>
+          </Nav.Link> */}
+
+          <Nav.Link href="http://127.0.0.1:5500/index.html">
+            <Option className="itemsNavTutor">Materias </Option>
+          </Nav.Link>
+
+          <Nav.Link>
+            <a href="#" className="btn btn-danger" id="btnSalirLog">
+              Salir
+            </a>
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

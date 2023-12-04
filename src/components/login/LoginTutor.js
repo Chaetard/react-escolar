@@ -3,60 +3,50 @@ import "../../styles/loginStyles/loginTutor.css";
 import "animate.css";
 import { Link } from "react-router-dom";
 
-let TAM_WIN = window.innerWidth;
-function handleResize() {
-  TAM_WIN = window.innerWidth;
-
-  console.log(TAM_WIN);
-
-  // Aquí puedes realizar acciones adicionales según la resolución
-}
-
-// Agregar un controlador de eventos para el evento 'resize'
-window.addEventListener("resize", handleResize);
-
 function LoginTutor(props) {
+  // let TAM_WIN = window.innerWidth;
+  //
   const estilo = {
     backgroundColor: props.color,
   };
 
-  const IMG = document.getElementsByClassName("cardText");
-  const IMAGEN = document.getElementsByClassName("imgCard");
+  //   const IMG = document.getElementsByClassName("cardText");
+  //   const IMAGEN = document.getElementsByClassName("imgCard");
 
-  console.log(TAM_WIN);
+  //   console.log(TAM_WIN);
 
-  function handleClick() {
-    setTimeout(() => {
-      if (TAM_WIN >= 1000) {
-        IMAGEN[0].style.height = "50vh";
-        IMAGEN[1].style.height = "50vh";
-        if (props.texto === "Tutor") {
-          IMG[0].style.width = "55vw";
-          IMG[1].style.width = "22vw";
+  //   function handleClick() {
+  //     setTimeout(() => {
+  //       if (TAM_WIN >= 1000) {
+  //         IMAGEN[0].style.height = "50vh";
+  //         IMAGEN[1].style.height = "50vh";
+  //         if (props.texto === "Tutor") {
+  //           IMG[0].style.width = "55vw";
+  //           IMG[1].style.width = "22vw";
 
-          IMAGEN[1].style.height = "22vw";
-        } else {
-          IMG[1].style.width = "55vw";
-          IMG[0].style.width = "22vw";
+  //           IMAGEN[1].style.height = "22vw";
+  //         } else {
+  //           IMG[1].style.width = "55vw";
+  //           IMG[0].style.width = "22vw";
 
-          IMAGEN[0].style.height = "22vw";
-        }
-      }
-    }, 150);
-  }
+  //           IMAGEN[0].style.height = "22vw";
+  //         }
+  //       }
+  //     }, 150);
+  //   }
 
-  function leavePointer() {
-    setTimeout(() => {
-      if (TAM_WIN >= 1000) {
-        IMAGEN[0].style.height = "50vh";
-        IMAGEN[1].style.height = "50vh";
-        IMG[0].style.width = "40vw";
-        IMG[1].style.width = "40vw";
-        IMG[0].style.height = "auto";
-        IMG[1].style.height = "auto";
-      }
-    }, 151);
-  }
+  //   function leavePointer() {
+  //     setTimeout(() => {
+  //       if (TAM_WIN >= 1000) {
+  //         IMAGEN[0].style.height = "50vh";
+  //         IMAGEN[1].style.height = "50vh";
+  //         IMG[0].style.width = "40vw";
+  //         IMG[1].style.width = "40vw";
+  //         IMG[0].style.height = "auto";
+  //         IMG[1].style.height = "auto";
+  //       }
+  //     }, 151);
+  //   }
 
   const ruta = props.texto;
   return (
@@ -64,9 +54,8 @@ function LoginTutor(props) {
       to={{ pathname: ruta }}
       className="cardText container text-center animate__animated animate__fadeInUp"
       style={estilo}
-      onPointerEnter={handleClick}
-      onPointerLeave={leavePointer}
-      
+      // onPointerEnter={handleClick}
+      // onPointerLeave={leavePointer}
     >
       <h1 className="tituloCard">Iniciar Sesión como {props.texto}</h1>
       <div className="imgJust">
