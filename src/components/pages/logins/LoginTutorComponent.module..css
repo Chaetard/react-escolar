@@ -58,7 +58,7 @@
   background-color: red !important;
 }
 
-@media (max-width: 399px) {
+@media (max-width: 512px) {
   #ContenedorLoginTutor {
     display: none;
   }

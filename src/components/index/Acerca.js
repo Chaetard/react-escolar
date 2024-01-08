@@ -26,7 +26,7 @@ function Acerca() {
           </div>
 
           <div className="col-md-4 d-flex contenedorTAc">
-            <img src={education} class="d-block imgAcerca" alt="..." />
+            <img src={education} className="d-block imgAcerca" alt="..." />
           </div>
         </div>
       </div>
@@ -254,29 +254,29 @@ function Acerca() {
       <div className="container contacto d-flex" id="contactoRef">
         <div className="row d-flex contCon">
           <h1 className="text-center">Contacto</h1>
-          <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">
+          <div className="mb-3">
+            <label htmlFor="exampleFormControlInput1" className="form-label">
               Correo Electrónico
             </label>
             <input
               type="email"
-              class="form-control"
+              className="form-control"
               id="exampleFormControlInput1"
               placeholder="correo@ejemplo.com"
             />
           </div>
 
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">
+          <div className="mb-3">
+            <label htmlFor="exampleFormControlTextarea1" className="form-label">
               Mensaje
             </label>
             <textarea
-              class="form-control"
+              className="form-control"
               id="exampleFormControlTextarea1"
               rows="3"
             ></textarea>
           </div>
-          <button type="button" class="btn btn-success">
+          <button type="button" className="btn btn-success">
             Enviar
           </button>
         </div>

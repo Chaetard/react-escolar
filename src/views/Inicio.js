@@ -6,7 +6,7 @@ import Acerca from "../components/index/Acerca";
 function Inicio() {
   return (
     <div className="App">
-      <NavBarHome />
+      <NavBarHome estado="true" />
       <div className="container-fluid logs">
         <div className="row">
           <div className="col-md-12">

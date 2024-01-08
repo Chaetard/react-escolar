@@ -5,11 +5,23 @@ import DatosAlumnoComponent from "../components/pages/TutorPanel/Alumno/DatosAlu
 function TutorPanel() {
   return (
     <>
-      <TutorNav />
-      <br />
-      <DatosAlumnoComponent />
+      <div style={posicion}>
+        <TutorNav />
+      </div>
+
+      <div>
+        <div >
+          <DatosAlumnoComponent />
+        </div>
+      </div>
     </>
   );
 }
 
 export default TutorPanel;
+const posicion = {
+  position: "fixed",
+
+  zIndex: "100",
+
+};

@@ -56,7 +56,7 @@ function LoginTutorComponent() {
               </h1>
             </Link>
 
-            <form className="formularioLogTut" action="/tutor-panel"   >
+            <form className="formularioLogTut" action="tutor-panel"   >
               <input
                 type="password"
                 className="form-control"

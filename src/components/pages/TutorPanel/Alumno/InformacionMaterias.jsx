@@ -1,78 +1,264 @@
-import ContainerMateriasPreview from "./ContainerMateriasPreview";
-
 import React, { useState } from "react";
+import InformacionEscolar from "./InformacionEscolar";
+import "./../estilos-navTutor.css";
+
+const datosGenerales = [
+  {
+    name: "B1",
+    Asistencias: 30,
+    Promedio: 80,
+    materia: "General",
+  },
+  {
+    name: "B2",
+    Asistencias: 30,
+    Promedio: 75,
+    materia: "General",
+  },
+  {
+    name: "B3",
+    Asistencias: 27,
+    Promedio: 92,
+    materia: "General",
+  },
+  {
+    name: "B5",
+    Asistencias: 30,
+    Promedio: 65,
+    materia: "General",
+  },
+];
+
+
+// const [seleccionad0, setSeleccionado] = useState("General");
+
 
 const InformacionMaterias = () => {
-  const [selectedView, setSelectedView] = useState(null);
 
-  const renderSelectedView = () => {
-    switch (selectedView) {
-      case "subview1":
-        return <ContainerMateriasPreview id="984032" materia="Matematicas" />;
-      case "subview2":
-        return <ContainerMateriasPreview id="23472" materia="Español" />;
-        case "subview3":
-        return <ContainerMateriasPreview id="9923" materia="Ciencias" />;
-      default:
-        return null;
-    }
+  
+
+
+  const [datos, setDatos] = useState(datosGenerales);
+
+  const handleRadioChangeGeneral = () => {
+    setDatos(datosGenerales);
+  };
+
+  const handleRadioChangeMatematicas = () => {
+    setDatos([
+      {
+        name: "B1",
+        Asistencias: 30,
+        Promedio: 72,
+        materia: "Matematicas",
+      },
+      {
+        name: "B2",
+        Asistencias: 30,
+        Promedio: 99,
+        materia: "Matematicas",
+      },
+      {
+        name: "B3",
+        Asistencias: 27,
+        Promedio: 99,
+        materia: "Matematicas",
+      },
+      {
+        name: "B5",
+        Asistencias: 30,
+        Promedio: 65,
+        materia: "Matematicas",
+      },
+    ]);
+  };
+
+  const handleRadioChangeEspañol = () => {
+    setDatos([
+      {
+        name: "B1",
+        Asistencias: 12,
+        Promedio: 45,
+        materia: "Español",
+      },
+      {
+        name: "B2",
+        Asistencias: 16,
+        Promedio: 61,
+        materia: "Español",
+      },
+      {
+        name: "B3",
+
+        Asistencias: 23,
+        Promedio: 81,
+        materia: "Español",
+      },
+      {
+        name: "B5",
+        Asistencias: 30,
+        Promedio: 96,
+        materia: "Español",
+      },
+    ]);
+  };
+
+  const handleRadioChangeCiencias = () => {
+    setDatos([
+      {
+        name: "B1",
+        Asistencias: 18,
+        Promedio: 60,
+        materia: "Ciencias",
+      },
+      {
+        name: "B2",
+        Asistencias: 18,
+        Promedio: 32,
+        materia: "Ciencias",
+      },
+      {
+        name: "B3",
+        Asistencias: 23,
+        Promedio: 98,
+        materia: "Ciencias",
+      },
+      {
+        name: "B5",
+        Asistencias: 22,
+        Promedio: 85,
+        materia: "Ciencias",
+      },
+    ]);
+  };
+
+  const handleRadioChangeHistoria = () => {
+    setDatos([
+      {
+        name: "B1",
+        Asistencias: 18,
+        Promedio: 87,
+        materia: "Historia",
+      },
+      {
+        name: "B2",
+        Asistencias: 31,
+        Promedio: 87,
+        materia: "Historia",
+      },
+      {
+        name: "B3",
+        Asistencias: 23,
+        Promedio: 98,
+        materia: "Historia",
+      },
+      {
+        name: "B5",
+        Asistencias: 22,
+        Promedio: 98,
+        materia: "Historia",
+      },
+    ]);
+  };
+
+  const handleRadioChangeGeografia = () => {
+    setDatos([
+      {
+        name: "B1",
+        Asistencias: 18,
+        Promedio: 75,
+        materia: "Geografia",
+      },
+      {
+        name: "B2",
+        Asistencias: 18,
+        Promedio: 76,
+        materia: "Geografia",
+      },
+      {
+        name: "B3",
+        Asistencias: 23,
+        Promedio: 65,
+        materia: "Geografia",
+      },
+      {
+        name: "B5",
+        Asistencias: 22,
+        Promedio: 91,
+        materia: "Geografia",
+      },
+    ]);
   };
 
   return (
-    <div>
-      <h2> Materias</h2>
-
-      <div>
-        <label style={cont}>
+    <div className="row">
+      <div className="col-lg-6 col-md-12">
+        <InformacionEscolar data={datos} />
+      </div>
+      <div className="col-lg-6 col-md-12">
+        <label  className="cont" >
+          <p style={labelS}> General </p>
+          <input
+            hidden
+            name="seleccion"
+            type="radio"
+            onClick={handleRadioChangeGeneral}
+          />
+        </label>
+        <label  className="cont" >
           <p style={labelS}>Matematicas </p>
           <input
             hidden
+            name="seleccion"
             type="radio"
-            value="subview1"
-            checked={selectedView === "subview1"}
-            onChange={() => setSelectedView("subview1")}
+            onClick={handleRadioChangeMatematicas}
           />
         </label>
-
-        <label style={cont}>
-          <p style={labelS}> Español </p>
+        <label  className="cont" >
+          <p style={labelS}>Español </p>
           <input
             hidden
+            name="seleccion"
             type="radio"
-            value="subview2"
-            checked={selectedView === "subview2"}
-            onChange={() => setSelectedView("subview2")}
+            onClick={handleRadioChangeEspañol}
           />
         </label>
-
-        <label style={cont}>
-          <p style={labelS}> Ciencias </p>
+        <label  className="cont" >
+          <p style={labelS}>Ciencias</p>
           <input
             hidden
+            name="seleccion"
             type="radio"
-            value="subview3"
-            checked={selectedView === "subview3"}
-            onChange={() => setSelectedView("subview3")}
+            onClick={handleRadioChangeCiencias}
           />
         </label>
-        
+        <label  className="cont" >
+          <p style={labelS}>Historia</p>
+          <input
+            hidden
+            name="seleccion"
+            type="radio"
+            onClick={handleRadioChangeHistoria}
+            
+          />
+        </label>
+        <label  className="cont" >
+          <p style={labelS}>Geografia</p>
+          <input
+            hidden
+            name="seleccion"
+            type="radio"
+            onClick={handleRadioChangeGeografia}
+          />
+        </label>
+        {/* Resto del código para otras materias */}
       </div>
-      {renderSelectedView()}
     </div>
   );
 };
 
-//en este componente es necesario crear un estilo de spa para poder visualizar una materia, generar detro del spa un hipervinculo que acceda a otra vista, en este caso seria una vista mas detallada de cada materia, por el momento solo es necesario generar un modelo par una sola muestra, Utiisa Use Efect para hacer la peticion a la api y obtener los datos
+// Resto del código para estilos
 
-// styles para el componente para que no genere conflictos en los demas componentes
-const cont = {
-  display: "grid",
-  gridTemplateColumns: "1fr 1fr",
-  paddingTop: "10px",
-  backgroundColor: "green",
-  margin: "10px",
-  color: "white",
-};
 const labelS = {
   marginLeft: "10px",
 };

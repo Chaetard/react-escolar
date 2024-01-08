@@ -1,0 +1,31 @@
+.materias{
+  margin: 5px 0;
+}
+
+.btnMaterias{
+margin-bottom: 10px ;
+}
+
+.contenedorMaterias{
+    display: flex;
+   
+    justify-content: center;
+
+    
+}
+.renderizado{
+ overflow: auto;
+  height: 80vh;
+ 
+}
+.tarjetaMateria{
+  margin-bottom: 10px;
+  height: 200px !important;
+}
+
+.textoIzq{
+  text-align: left;
+}
+.textoDer{
+  text-align: right;
+}

@@ -7,17 +7,52 @@
 }
 
 .itemsNavTutor {
-     color: white !important; 
-    
+  color: white !important;
 }
 
-#basic-nav-dropdown{
-   color: white !important; 
+#basic-nav-dropdown {
+  color: white !important;
   font-size: 1.5rem;
-  
 }
 
-#btnSalirLog{
+#btnSalirLog {
   margin-right: 10px;
   width: 100px;
+}
+
+.imgOption {
+  width: 30px;
+  height: 30px;
+  margin-top: 1.3%;
+  margin-left: 10px;
+}
+
+.imgOptionIn {
+  width: 30px;
+  height: 30px;
+}
+.cont {
+  transition: 0.2s;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 10px;
+  background-color: #31a1f7;
+  margin: 10px;
+  color: black;
+  border-radius: 10px;
+
+
+}
+.cont:hover {
+  transition: 0.2s;
+  cursor: pointer;
+
+  transform: translateX(-5px);
+  transition: transform 0.5s;
+  will-change: transform;
+}
+.fixCont {
+  margin-left: 5vw !important;
+  margin-right: 6vw !important;
 }

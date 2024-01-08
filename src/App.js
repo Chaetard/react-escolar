@@ -1,9 +1,9 @@
 import React from "react";
-import AppRouter from "./router";
+import Inicio from "./views/Inicio";
 
 
 function App() {
-  return <AppRouter />;
+  return <Inicio />;
 }
 
 export default App;
