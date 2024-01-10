@@ -1,31 +1,68 @@
-.materias{
+.materias {
   margin: 5px 0;
 }
 
-.btnMaterias{
-margin-bottom: 10px ;
+.btnMaterias {
+  margin-bottom: 10px;
+  width: 170px !important;
 }
 
-.contenedorMaterias{
-    display: flex;
-   
-    justify-content: center;
+.contenedorMaterias {
+  display: flex;
 
-    
+  justify-content: center;
 }
-.renderizado{
- overflow: auto;
+.renderizado {
+  overflow: auto;
   height: 80vh;
- 
 }
-.tarjetaMateria{
+.tarjetaMateria {
   margin-bottom: 10px;
   height: 200px !important;
 }
 
-.textoIzq{
+.textoIzq {
   text-align: left;
 }
-.textoDer{
+.textoDer {
   text-align: right;
+}
+.notaCard {
+  height: 200px !important;
+}
+.espera {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.espera > h1 {
+  font-size: 100px !important;
+}
+.grid5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.contAsisGen {
+  height: 134px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  margin: 5px;
+  width: 134px;
+  border-radius: 20px;
+}
+.contAsisGen > h2 {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+.contFaltas {
+  background-color: red;
+}
+.contJust {
+  background-color: yellow;
+}
+.contAsis {
+  background-color: green;
 }

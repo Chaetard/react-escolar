@@ -22,13 +22,13 @@ function MateriaDetalleComponent(props) {
       contenidoRenderizado = props.tareas.map((objeto, index) => {
         let colorFondo;
 
-        if (objeto.nota < 6) {
+        if (objeto.nota < 6 && objeto.nota >= 0.1) {
           colorFondo = "red";
         } else if (objeto.nota >= 6.1 && objeto.nota <= 7.9) {
           colorFondo = "yellow";
         } else if (objeto.nota >= 8 && objeto.nota <= 10) {
           colorFondo = "green";
-        } else {
+        } else if (objeto.nota === 0) {
           colorFondo = "gris";
         }
 
@@ -41,17 +41,15 @@ function MateriaDetalleComponent(props) {
             <div className="card tarjetaMateria">
               <div className="card-header" style={estiloTarjeta}>
                 <div className="row">
-                  <div className="col-6 textoIzq">
+                  <div className="col-6 textoIzq">Fecha:{objeto.fecha}</div>
+                  <div className="col-6 textoDer">
                     {" "}
-                    Fecha:{objeto.fecha}
+                    <b>Tarea: </b> {objeto.id}
                   </div>
-                  <div className="col-6 textoDer"> <b>Tarea: </b> {objeto.id}</div>
                 </div>
               </div>
               <div className="card-body d-flex flex-column">
-                <p>
-                  {objeto.tarea}
-                </p>
+                <p>{objeto.tarea}</p>
                 <div className="mt-auto">
                   <small className="text-muted">
                     <div className="row">
@@ -70,48 +68,75 @@ function MateriaDetalleComponent(props) {
 
       break;
     case 2:
-      contenidoRenderizado = <table>
-        <thead>
-          <tr>
-            <th>Fecha</th>
-            <th>Asistencia</th>
-          </tr>
-        </thead>
-        <tbody>
-          {props.asistencias.map((objeto, index) => {
-            let colorFondo;
+      contenidoRenderizado = (
+        <table>
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Asistencia</th>
+            </tr>
+          </thead>
+          <tbody>
+            {props.asistencias.map((objeto, index) => {
+              let colorFondo;
 
-                if (objeto.asistencia === "Ausente") {
-                    colorFondo = "red";
-                  
-                } else if (objeto.asistencia === "Justificado") {
-                    colorFondo = "yellow";
-                } else if (objeto.asistencia === "Presente") {
-                    colorFondo = "green";
-                } else {
-                    colorFondo = "gris";
-                }
+              if (objeto.asistencia === "Ausente") {
+                colorFondo = "red";
+              } else if (objeto.asistencia === "Justificado") {
+                colorFondo = "yellow";
+              } else if (objeto.asistencia === "Presente") {
+                colorFondo = "green";
+              } else {
+                colorFondo = "gris";
+              }
 
-                const estiloTarjeta = {
-                    backgroundColor: colorFondo,
-                };
+              const estiloTarjeta = {
+                backgroundColor: colorFondo,
+              };
 
-            return (
-              <tr key={index} style={estiloTarjeta}>
-                <td>{objeto.fecha}</td>
-                <td>{objeto.asistencia}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>;
+              return (
+                <tr key={index} style={estiloTarjeta}>
+                  <td>{objeto.fecha}</td>
+                  <td>{objeto.asistencia}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      );
       break;
     case 3:
-      contenidoRenderizado = <p>Contenido del Botón 3</p>;
+      contenidoRenderizado = (
+        <div className="row">
+        {props.notas.map((objeto, index) => {
+          const estiloNota = {
+            backgroundColor: objeto.color,
+          };
+    
+          return (
+            <div className="col-4 " key={index}>
+              <div className="card  mb-3 notaCard" style={estiloNota}>
+                <div className="card-header"><h5 className="card-title">{objeto.titulo}</h5></div>
+                <div className="card-body">
+                  
+                  <p className="card-text">{objeto.contenido}</p>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+     
+      );
       break;
     default:
       contenidoRenderizado = (
-        <img src={wait} alt="img de espera" srcset="" height={400} />
+        <div className="espera">
+          <h1 id="titleEscolar">
+            Mi Escolar
+        </h1>
+        </div>
+
       );
   }
   return (
@@ -123,21 +148,21 @@ function MateriaDetalleComponent(props) {
           <div>
             <button
               type="button"
-              class="btn btn-outline-success w-100 btnMaterias"
+              className="btn btn-outline-success w-100 btnMaterias"
               onClick={handleClickBoton1}
             >
               Tareas
             </button>
-            <button
+            {/* <button
               type="button"
-              class="btn btn-outline-success w-100 btnMaterias"
+              className="btn btn-outline-success w-100 btnMaterias"
               onClick={handleClickBoton2}
             >
               Asistencias
-            </button>
+            </button> */}
             <button
               type="button"
-              class="btn btn-outline-success w-100 btnMaterias"
+              className="btn btn-outline-success w-100 btnMaterias"
               onClick={handleClickBoton3}
             >
               Notas

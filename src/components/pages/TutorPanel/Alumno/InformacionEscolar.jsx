@@ -9,6 +9,10 @@ import {
   Legend,
 } from "recharts";
 
+
+// https://recharts.org/
+
+
 class CustomizedLabel extends PureComponent {
   render() {
     const { x, y, stroke, value } = this.props;
@@ -87,7 +91,7 @@ export default class InformacionEscolar extends PureComponent {
             strokeWidth={3}
             label={<CustomizedLabel />}
           />
-          <Line type="monotone" dataKey="Asistencias" stroke="#82ca9d" />
+          
         </LineChart>
 
         {materia !== "General" ? (
